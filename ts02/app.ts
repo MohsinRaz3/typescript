@@ -1,5 +1,6 @@
 import a from "./first"
 import {b ,c as d } from "./second"
 
-console.log(a , b , d)
+// we took c variable as d
+console.log(a , b, d )
 

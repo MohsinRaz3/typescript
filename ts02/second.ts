@@ -1,3 +1,3 @@
-export const b = "Mohsin"
+export const b: string = "Mohsin"
 
-export const c = "raz"
+export const c:string = "raz"
