@@ -7,6 +7,6 @@ function hello(name, ...aka) {
     else {
         console.log(`Hello ${name + " " + aka}`);
     }
-    return aka;
+    return name;
 }
-hello("Mohsin", "kahn", "afridi");
+hello("Mohsin");
