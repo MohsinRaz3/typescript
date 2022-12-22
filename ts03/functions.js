@@ -2,11 +2,17 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 function hello(name, ...aka) {
     if (aka === undefined) {
-        console.log(`Hello ${name}`);
+        return `Hello ${name}`;
     }
     else {
-        console.log(`Hello ${name + " " + aka}`);
+        return `Hello ${name + " " + aka.join(" ")}`;
     }
-    return name;
 }
-hello("Mohsin");
+let greetin = hello("Mohsin", "raz", "kahn");
+console.log(greetin);
+//Anonymous arrow Function
+let AnonFun = (fName, lName) => {
+    return fName + lName;
+};
+let varF = AnonFun("heee", "bee");
+console.log(varF);
