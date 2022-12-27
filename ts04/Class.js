@@ -3,20 +3,26 @@ Object.defineProperty(exports, "__esModule", { value: true });
 class Car {
     name;
     model;
-    company = "bENZ";
-    doStart() {
-        return "car is starting";
+    company;
+    _lisence; // read or update
+    constructor(name, model, company) {
+        this.name = name;
+        this.model = model;
+        this.company = company;
     }
-    doBreak() {
-        return "Car is stopping!";
+    get lisence() {
+        return this._lisence;
     }
-    doStop() {
-        return "Car is stopped";
+    set lisence(val) {
+        this._lisence = val;
+    }
+    //function that do stuff behaviour
+    doStuff() {
+        return `${this.name} ${this.model}, ${this.lisence}`;
     }
 }
-let Benz = new Car(); // INSTANCE
-Benz.name = "Mercidez";
-Benz.model = 123;
-Benz.company = "Benz mercidez";
-console.log(Benz.name);
-console.log(Benz.doBreak());
+let Benz = new Car("Benz", 122, "mecidez"); // INSTANCE
+let Cultus = new Car("Cultus", 321, "toyota");
+Cultus.lisence = 786;
+console.log(Benz.doStuff());
+console.log(Cultus.doStuff());

@@ -1,27 +1,35 @@
 class Car{
-    name?: string;
-    model!: number;
-    company: string = "bENZ";
+    name: string;
+    model: number;
+    company: string ;
+    _lisence!: number;  // read or update
 
-    doStart(){
-        return "car is starting"
-    }
-    
-    doBreak(){
-        return "Car is stopping!"
+    constructor(name:string, model:number, company:string){
+        this.name = name;
+        this.model = model;
+        this.company = company;
     }
 
-    doStop(){
-        return "Car is stopped"
+    get lisence(){                      // Getter setter
+        return this._lisence;
+    }
+
+    set lisence(val: number){
+        this._lisence = val
+    }
+
+    //function that do stuff behaviour
+    doStuff(){
+        return `${this.name} ${this.model}, ${this!.lisence}`
     }
 }
 
-let Benz = new Car() // INSTANCE
+let Benz = new Car("Benz",122,"mecidez") // INSTANCE
+let Cultus = new Car("Cultus", 321, "toyota")
 
-Benz.name = "Mercidez"
-Benz.model = 123
-Benz.company = "Benz mercidez"
+Cultus.lisence = 786
 
-console.log(Benz.name);
-console.log(Benz.doBreak());
+console.log(Benz.doStuff());
+console.log(Cultus.doStuff());
+
 

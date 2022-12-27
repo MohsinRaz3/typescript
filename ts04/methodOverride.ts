@@ -1,0 +1,36 @@
+class Car4 {
+    color: string;
+    readonly owner!: string;     // optional property ever used && readomly we can't reassign another value
+
+    constructor(rang: string, owner: string) {
+        this.color = rang;
+        this.owner = owner;
+    }
+    start(state: boolean): string {
+        if (state === true) {
+            return "Start engine"
+        } else {
+            return "Shutting down engine"
+        }
+    }
+}
+
+class Mercedes extends Car4 {   // Entends Car4 to Mercedes
+
+    constructor(rang: string, owner: string, alloyWheels: boolean) {
+        super(rang, owner)                    // Call super to OVERRIDE Constructor
+        this.alloyWheels = alloyWheels
+    }
+    alloyWheels: boolean;
+    suspensions = true;
+
+    start(state: boolean): string {
+        if (state === true) {
+            return "Start mercs engine"
+        } else {
+            return "Shutting down mercs engine"
+        }
+}
+}
+let myNewCar = new Mercedes("purple", "Mohsin", false)
+console.log(`AlloyWheels: ${myNewCar.alloyWheels}  CarColor: ${myNewCar.color}  EnigneState: ${myNewCar.start(true)}`);
