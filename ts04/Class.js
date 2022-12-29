@@ -23,6 +23,7 @@ class Car {
 }
 let Benz = new Car("Benz", 122, "mecidez"); // INSTANCE
 let Cultus = new Car("Cultus", 321, "toyota");
+Benz.lisence = 678;
 Cultus.lisence = 786;
 console.log(Benz.doStuff());
 console.log(Cultus.doStuff());

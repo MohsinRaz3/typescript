@@ -20,13 +20,14 @@ class Car{
 
     //function that do stuff behaviour
     doStuff(){
-        return `${this.name} ${this.model}, ${this!.lisence}`
+        return `${this.name} ${this.model}, ${this.lisence}`
     }
 }
 
 let Benz = new Car("Benz",122,"mecidez") // INSTANCE
 let Cultus = new Car("Cultus", 321, "toyota")
 
+Benz.lisence = 678
 Cultus.lisence = 786
 
 console.log(Benz.doStuff());
