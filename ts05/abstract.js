@@ -11,5 +11,6 @@ class Derived extends Base {
         return "second method";
     }
 }
+//let baseObj = new Base()  We cant create object of abstract class
 let absObj = new Derived();
 console.log(absObj.getName());
